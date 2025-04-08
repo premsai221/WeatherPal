@@ -1,9 +1,11 @@
 <script setup>
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 
 const drawer = ref(true)
 const rail = ref(false)
+const route = useRoute()
 </script>
 
 <template>
@@ -14,6 +16,7 @@ const rail = ref(false)
         theme="dark"
         @click="rail = false"
         permanent
+        :location="$vuetify.display.mobile ? 'top' : undefined"
     >
     <v-list>
         <v-list-item
@@ -36,7 +39,7 @@ const rail = ref(false)
         <v-list nav density="compact">
             <v-list-item prepend-icon="mdi-view-dashboard" title="Dashboard" value="Dashboard">
                 <template v-slot:title>
-                    <div class="font-weight-bold">
+                    <div class="text-subtitle-2">
                         Dashboard
                     </div>
                 </template>
