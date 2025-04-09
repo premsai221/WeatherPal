@@ -207,7 +207,7 @@ const updateLocation = async (lat, long) => {
                             </template>
                             <template v-slot:text>
                                 <v-row>
-                                    <v-col cols="6" >
+                                    <v-col cols="12" md="6">
                                         <v-card 
                                         class="pa-2" 
                                         variant="flat" 
@@ -232,7 +232,7 @@ const updateLocation = async (lat, long) => {
                                             </template>
                                         </v-card>
                                     </v-col>
-                                    <v-col cols="6">
+                                    <v-col cols="12" md="6">
                                         <v-card 
                                         class="pa-2" 
                                         variant="flat" 
@@ -257,7 +257,7 @@ const updateLocation = async (lat, long) => {
                                             </template>
                                         </v-card>
                                     </v-col>
-                                    <v-col cols="6">
+                                    <v-col cols="12" md="6">
                                         <v-card 
                                         prepend-icon="mdi-weather-windy" 
                                         class="pa-2" 
@@ -283,7 +283,7 @@ const updateLocation = async (lat, long) => {
                                             </template>
                                         </v-card>
                                     </v-col>
-                                    <v-col cols="6">
+                                    <v-col cols="12" md="6">
                                         <v-card 
                                         prepend-icon="mdi-weather-windy" 
                                         class="pa-2" 
@@ -349,7 +349,7 @@ const updateLocation = async (lat, long) => {
                         <div class="font-weight-bold pa-4">{{ time }}</div>
                     </v-container>
                     <v-container class="d-flex mt-2 align-center justify-space-around">
-                        <div class="text-h1">{{ curWeather.temperature }}° C</div>
+                        <div class="text-h2 text-md-h1">{{ curWeather.temperature }}° C</div>
                         <div class="text-overline">{{ curWeather.condition }}</div>
                     </v-container>
                     <v-divider :thickness="2" class="px-10 my-2 mx-4"></v-divider>
@@ -367,7 +367,7 @@ const updateLocation = async (lat, long) => {
                             <div class="text-button text-no-wrap ml-4">{{ item.value }} %</div>
                         </div>
                     </v-container>
-                    <v-container class="d-flex justify-space-evenly">
+                    <v-container class="d-flex flex-column ga-6 flex-lg-row justify-space-evenly">
                         <v-card class="pa-4" variant="tonal" prepend-icon="mdi-white-balance-sunny" :title="sunTime.sunrise" subtitle="Sunrise">
                         </v-card>
                         <v-card class="pa-4" variant="tonal" prepend-icon="mdi-weather-sunset" :title="sunTime.sunset" subtitle="Sunset">
